@@ -1,0 +1,779 @@
+this project is half done...start continuing from where you left. use all the skills.... which is on the c and d drive here. give your best output.# PROOFPAY — CHUNK 1 MASTER BUILD SPECIFICATION
+## Premium Fintech SaaS Frontend | Production-Quality UI Foundation
+
+Act as a senior product designer, frontend architect and experienced Next.js engineer. Build the complete frontend foundation for ProofPay, a premium payment-evidence analysis platform designed for individual users and merchants.
+
+Do not merely generate a landing page or a static visual mockup. Build a real, navigable, responsive frontend with functional interactions, reusable components, polished UI states and a clean architecture that can later connect to a Python FastAPI backend and Supabase.
+
+Before coding, inspect the existing workspace, package.json, file structure and current application. If the project already contains working code, preserve it and extend it intelligently. Do not blindly overwrite files or recreate the project from scratch.
+
+==================================================
+1. PRODUCT IDENTITY AND POSITIONING
+==================================================
+
+Product name: ProofPay
+
+Primary tagline:
+“Verify the payment. Not just the screenshot.”
+
+Alternative supporting headline:
+“A screenshot isn't proof. Check the evidence.”
+
+Product description:
+ProofPay helps individuals and merchants analyze submitted payment screenshots, identify suspicious inconsistencies, flag duplicate or visually similar receipts, and compare receipt details against expected orders.
+
+The current version is an evidence-analysis MVP. It does NOT independently confirm whether money has reached a bank account. Independent payment confirmation requires an authorized payment-provider integration.
+
+Target users:
+1. Individuals checking a screenshot they received.
+2. Small businesses, Instagram sellers, freelancers, shopkeepers and merchants managing payment evidence and orders.
+
+Brand personality:
+- Trustworthy
+- Intelligent
+- Modern
+- Precise
+- Premium
+- Calm and professional
+- Approachable to everyday Indian users
+
+Do not position ProofPay as a bank, UPI application or payment gateway. It is a payment-evidence analysis and risk-review tool.
+
+==================================================
+2. TECHNOLOGY AND PROJECT RULES
+==================================================
+
+Use:
+- Next.js with App Router
+- TypeScript with strict typing
+- Tailwind CSS
+- Lucide React icons
+- React components with clear responsibilities
+- A small, consistent design system
+- Accessible semantic HTML
+- Responsive layouts
+
+Use the existing package manager and project configuration. Do not replace package-lock.json, pnpm-lock.yaml or yarn.lock unnecessarily.
+
+Do not install large UI libraries without a clear reason. Prefer lightweight components and CSS.
+
+Do not:
+- Build the application as one giant component.
+- Put all data, styles and logic into a single page.
+- Add fake API integrations.
+- hardcode credentials.
+- create buttons that do nothing.
+- leave dead navigation links.
+- use emoji as replacements for interface icons.
+- generate a different design language on each page.
+- introduce unnecessary dependencies or complex animations.
+
+Use a consistent file structure with:
+- app/
+- components/layout/
+- components/ui/
+- components/upload/
+- components/reports/
+- components/dashboard/
+- lib/
+- lib/api/
+- lib/demo/
+- types/
+- public/
+
+Adapt the structure if the existing project already has an equivalent organization.
+
+==================================================
+3. VISUAL DESIGN SYSTEM
+==================================================
+
+Design direction:
+A sophisticated fintech security product with the restraint of Stripe and Linear, strong typography, crisp layouts, excellent spacing and carefully chosen indigo accents.
+
+The result should look like a real early-stage SaaS product built by a professional product team, not a generic AI-generated dashboard template.
+
+Color palette:
+- Primary indigo: #4F46E5
+- Dark indigo: #3730A3
+- Main background: #F8FAFC
+- Primary text: #0F172A
+- Secondary text: #64748B
+- Border: #E2E8F0
+- Surface: #FFFFFF
+- Subtle indigo surface: #EEF2FF
+- Success: #15803D
+- Warning: #B45309
+- Danger: #B91C1C
+
+Use semantic color tokens rather than scattering arbitrary hex codes across components.
+
+Typography:
+- Use Inter or a similarly clean sans-serif font.
+- Use a clear hierarchy between page titles, section headings, body text and labels.
+- Keep body text comfortably readable.
+- Avoid oversized typography on every section.
+- Use consistent font weights.
+- Use tabular numerals for amounts, counts and timestamps where appropriate.
+
+Spacing:
+- Follow a consistent spacing scale.
+- Use generous spacing on marketing sections.
+- Use denser, well-organized spacing on dashboards.
+- Maintain consistent alignment across cards, headers, forms and tables.
+
+Borders and surfaces:
+- Prefer subtle one-pixel borders.
+- Use restrained shadows only where elevation is useful.
+- Use consistent corner radii.
+- Keep cards visually distinct without excessive decoration.
+
+Avoid:
+- Excessive gradients.
+- Neon colors.
+- Giant glowing blobs.
+- Heavy glassmorphism.
+- Excessive blur.
+- Constant floating animations.
+- Excessive rounded pill containers.
+- Cartoon illustrations.
+- Fake browser windows everywhere.
+- Huge empty hero sections.
+- Oversized logos.
+- Dense blocks of marketing copy.
+- Random decorative icons.
+
+Animations must be subtle, fast and purposeful. Respect prefers-reduced-motion.
+
+==================================================
+4. GLOBAL APP SHELL AND NAVIGATION
+==================================================
+
+Create a reusable site header.
+
+Desktop header:
+- ProofPay wordmark on the left.
+- A small, custom shield/check-inspired icon built with Lucide or CSS.
+- Navigation links: How It Works, For Individuals, For Merchants.
+- Secondary action: Sign In.
+- Primary action: Analyze a Screenshot.
+- Sticky behavior only if it improves navigation.
+- Thin border separating the header from the page.
+
+Mobile header:
+- Compact wordmark.
+- Accessible menu button.
+- Working mobile navigation drawer or dropdown.
+- Primary action accessible without awkward horizontal scrolling.
+
+Create a consistent footer with:
+- ProofPay wordmark.
+- Short product description.
+- Product links.
+- Privacy.
+- Terms.
+- Contact placeholder only if no actual contact details exist.
+- Copyright year generated dynamically.
+
+Do not invent a real company address, phone number, email address, certification, partnership or customer testimonial.
+
+For pages that are not implemented yet, either provide a useful placeholder page or clearly mark the feature as coming soon. Never create a broken link.
+
+==================================================
+5. LANDING PAGE — COMPLETE DESIGN
+==================================================
+
+Route: /
+
+The landing page must communicate the product in the first few seconds.
+
+A. Hero section
+
+Eyebrow:
+“PAYMENT EVIDENCE INTELLIGENCE”
+
+Headline:
+“A screenshot isn't proof. Check the evidence.”
+
+Supporting paragraph:
+“Analyze payment screenshots, spot suspicious inconsistencies, and detect repeated receipts before making a decision.”
+
+Primary CTA:
+“Analyze a Screenshot”
+
+Secondary CTA:
+“Explore Merchant Tools”
+
+Small trust statement:
+“Screenshot analysis and duplicate detection. Independent payment confirmation is not included in this MVP.”
+
+Hero layout:
+- Left side: headline, description, CTA buttons and a short privacy note.
+- Right side: a realistic, custom-built ProofPay analysis report preview.
+- Keep the hero balanced and compact.
+- Do not use a random stock photograph.
+- Build the report preview from actual reusable interface components.
+
+Hero report preview should contain:
+- Sample transaction amount, such as ₹2,450.00.
+- A visible label: “DEMO REPORT”.
+- Analysis status: “Analysis complete”.
+- Payment confirmation: “Unverified”.
+- A sample finding: “Similar receipt detected”.
+- A second sample finding: “Amount matches expected order”.
+- Small evidence indicators.
+- A subtle timestamp.
+- A clear note that all preview data is illustrative.
+
+The mock report must not suggest that a real payment was checked.
+
+B. Problem and solution section
+
+Heading:
+“Payment screenshots are easy to share. Harder to trust.”
+
+Explain three problems:
+- Altered or inconsistent receipt details.
+- The same screenshot submitted against multiple orders.
+- Manual checking across messages, orders and transaction references.
+
+Follow with the ProofPay approach:
+- Extract visible details.
+- Compare evidence against expected order information.
+- Flag exact and visually similar receipts.
+- Present findings in a readable report.
+
+Do not claim perfect fraud detection.
+
+C. How it works section
+
+Create three steps:
+
+01 — Upload the screenshot
+“Submit a payment receipt image for analysis.”
+
+02 — Compare the evidence
+“Inspect visible fields, image fingerprints and expected order details.”
+
+03 — Review the findings
+“See mismatches, duplicate warnings and details that need manual review.”
+
+Use a clean three-column layout on desktop and a vertical layout on mobile.
+
+D. Feature section
+
+Create four well-designed feature cards.
+
+1. Screenshot Analysis
+Description: Extract visible amount, date, reference and recipient text where readable.
+
+2. Duplicate Detection
+Description: Identify exact repeated files and flag visually similar screenshots.
+
+3. Order Matching
+Description: Compare extracted details with expected order information.
+
+4. Evidence History
+Description: Review previous scans and investigate repeated submissions.
+
+Each card should have:
+- Appropriate Lucide icon.
+- Short title.
+- Concise description.
+- Consistent layout.
+- Subtle hover interaction.
+
+Do not claim any feature is live if it is only a mockup.
+
+E. Individual users section
+
+Heading:
+“Check a receipt before you trust it.”
+
+Describe the individual workflow:
+- Upload a screenshot.
+- Review the extracted information.
+- Inspect any detected warnings.
+- Understand what remains unconfirmed.
+
+CTA:
+“Try the Screenshot Checker”
+
+F. Merchant section
+
+Heading:
+“Keep every order and receipt in context.”
+
+Describe:
+- Match receipts to expected order amounts.
+- Identify repeated evidence.
+- Review previous scans.
+- Keep order review organized.
+
+CTA:
+“Explore Merchant Dashboard”
+
+G. Trust and limitations section
+
+This section is mandatory and should look intentional, not like an apology.
+
+Heading:
+“Clear evidence. Honest results.”
+
+Explain:
+- Image analysis does not prove that funds have settled.
+- OCR may fail on blurry or edited images.
+- Duplicate matches are warnings, not automatic proof of fraud.
+- Independent payment confirmation requires an authorized payment-provider integration.
+
+Use a short, readable layout with a subtle neutral or indigo background.
+
+H. Final CTA section
+
+Heading:
+“Make the evidence easier to check.”
+
+Description:
+“Start with a screenshot. Review the details. Make a better-informed decision.”
+
+Primary CTA:
+“Analyze a Screenshot”
+
+I. Footer
+
+Use the shared footer described earlier.
+
+==================================================
+6. SCREENSHOT CHECKER — COMPLETE FUNCTIONAL UI
+==================================================
+
+Route: /check
+
+Build a real client-side upload interface. It must work even though the backend is not yet connected.
+
+Page heading:
+“Analyze a payment screenshot”
+
+Supporting text:
+“Upload a receipt to inspect its visible details and identify possible inconsistencies.”
+
+Layout:
+- Centered content area with a reasonable maximum width.
+- Upload card as the main focus.
+- Optional transaction/order context in a separate panel.
+- Helpful sample instructions.
+- No clutter.
+
+A. Upload zone
+
+Include:
+- Drag-and-drop area.
+- Click-to-browse file selection.
+- Upload icon.
+- Text: “Drop your screenshot here”.
+- Supporting text: “PNG, JPG or JPEG”.
+- Maximum size displayed clearly, such as 10 MB.
+- File picker input with appropriate accept attribute.
+- Keyboard-accessible upload interaction.
+
+Validate:
+- File extension and decoded image type where possible.
+- Maximum file size.
+- Actual image decoding.
+- Empty selection.
+- Invalid file errors.
+
+Never trust the filename or MIME type alone.
+
+B. After upload
+
+Display:
+- Image preview using a temporary browser object URL.
+- Filename.
+- File size.
+- Remove button.
+- Replace button.
+- Clear upload state.
+
+Revoke temporary object URLs when they are no longer needed.
+
+Do not upload or retain files on a remote server during this frontend-only phase.
+
+C. Optional context form
+
+Add fields:
+- Expected amount in INR.
+- Order ID (optional).
+- Transaction reference (optional).
+- Expected recipient name or UPI ID (optional).
+
+Do not require personal information that is unnecessary for the demo.
+
+Show ₹ formatting consistently. Do not allow invalid negative amounts.
+
+D. Analyze button
+
+Label:
+“Analyze Screenshot”
+
+Behavior:
+- Disabled until a valid image is selected.
+- Show a loading state when clicked.
+- Validate the form.
+- Call a dedicated analysis service interface.
+- Since the backend is not yet implemented, use an explicitly enabled demo provider.
+- The result must visibly state “DEMO — simulated analysis”.
+- Never describe the result as real image verification.
+- Make it straightforward to replace the demo provider with the actual backend later.
+
+If the live backend is selected but unavailable, display a connection error and retry action. Do not silently fall back to simulated results.
+
+E. Result view
+
+Display a polished report with:
+
+1. Analysis summary.
+2. Extracted amount, date, transaction reference and recipient text when available.
+3. Exact duplicate status.
+4. Similar-image status.
+5. Expected amount/order mismatch.
+6. Findings and explanations.
+7. Recommended next action.
+8. A visible “Payment confirmation: Unverified” label.
+9. A button to analyze another screenshot.
+10. A button to return to the checker or dashboard where relevant.
+
+Use statuses such as:
+- No issue detected in the checks performed.
+- Needs review.
+- High concern.
+- Unable to analyze.
+
+Do not use a “100% genuine” label or claim that a screenshot is authentic.
+
+The result component must be driven by a typed result object rather than hardcoded content inside the JSX.
+
+F. Error and empty states
+
+Implement:
+- No image selected.
+- Unsupported file.
+- Image too large.
+- Invalid/corrupted image.
+- Analysis unavailable.
+- OCR data missing.
+- No prior duplicate match.
+- Analysis in progress.
+- Analysis completed.
+- Retry and reset actions.
+
+==================================================
+7. MERCHANT DASHBOARD — COMPLETE UI
+==================================================
+
+Routes:
+- /merchant
+- /merchant/orders
+- /merchant/scans
+- /merchant/settings
+
+Create a professional dashboard layout.
+
+Desktop:
+- Fixed or sticky left sidebar where appropriate.
+- Main content with consistent page padding.
+- Top bar with page title, demo/account indicator and profile menu.
+- Content grid adapted to screen size.
+
+Mobile:
+- Sidebar becomes a working drawer or compact navigation.
+- Tables become horizontally scrollable or transform into readable cards.
+- Forms remain usable on small screens.
+- No horizontal overflow at page level.
+
+Sidebar items:
+- Overview
+- Orders
+- Scan History
+- Settings
+
+Show a small “DEMO MODE” indicator until real authentication is implemented.
+
+A. Dashboard overview — /merchant
+
+Page heading:
+“Merchant Overview”
+
+Supporting text:
+“Review submitted receipts, identify repeated evidence and keep order checks organized.”
+
+Summary cards:
+- Total scans.
+- Flagged receipts.
+- Possible duplicates.
+- Orders awaiting review.
+
+All values must come from a centralized demo dataset and be labelled as sample/demo information.
+
+Create:
+- Recent scan activity table.
+- Recent orders section.
+- Risk review queue.
+- “Create Order” action.
+- “Analyze Screenshot” action.
+
+Table columns:
+- Date and time.
+- Order ID.
+- Expected amount.
+- Findings.
+- Review status.
+- View action.
+
+B. Orders page — /merchant/orders
+
+Include:
+- Page title.
+- Search input.
+- Status filter.
+- Create Order button.
+- Orders table.
+- Empty state.
+- Loading state.
+- Error state.
+
+Order fields:
+- Order number.
+- Expected amount in INR.
+- Expected recipient text.
+- Creation date.
+- Status.
+
+Create Order modal or page:
+- Order number.
+- Expected amount.
+- Expected recipient, optional.
+- Cancel and Create buttons.
+- Required-field validation.
+- Success feedback in demo mode.
+
+For this frontend phase, newly created demo orders may be stored in client-side application state for the current session. Do not pretend they have been saved to a real database. Keep the storage logic behind an interface so Supabase can replace it later.
+
+C. Scan history page — /merchant/scans
+
+Include:
+- Search by order ID or visible reference.
+- Filter by finding category.
+- Filter by review status.
+- Table with timestamps, amounts, findings and action.
+- A details panel or detail route.
+- Empty and error states.
+
+D. Settings page — /merchant/settings
+
+Include:
+- Profile section.
+- Merchant display name.
+- Notification preference toggles as local demo settings.
+- Integration status card showing “Payment-provider integration not connected”.
+- Privacy and data-handling information.
+- Account/security section clearly labelled as demo if authentication does not exist.
+
+Do not collect real credentials or payment-provider secrets in this phase.
+
+==================================================
+8. SCAN REPORT COMPONENT SYSTEM
+==================================================
+
+Build reusable report components rather than duplicating report markup.
+
+Create a typed report model with fields similar to:
+- id
+- createdAt
+- mode: demo or live
+- analysisStatus
+- paymentConfirmation
+- riskLevel
+- extractedFields
+- checks
+- findings
+- recommendedAction
+
+Suggested finding categories:
+- exact_duplicate
+- similar_image
+- amount_mismatch
+- recipient_mismatch
+- reference_reuse
+- low_ocr_confidence
+- missing_field
+- manual_review
+
+Each finding should include:
+- category
+- severity
+- short title
+- explanation
+- evidence description
+- recommended action
+
+Use clear status badges, but do not rely on color alone. Include text and/or icons to convey meaning.
+
+Provide:
+- Summary card.
+- Extracted fields panel.
+- Findings list.
+- Previous-match panel.
+- Next-action panel.
+- Report timestamp.
+- Demo/live indicator.
+
+Do not show a previous-match panel with invented real transaction details. Sample values must be visibly marked as demo data.
+
+==================================================
+9. API ABSTRACTION AND TYPES
+==================================================
+
+Prepare the frontend for the future FastAPI backend.
+
+Create a central API configuration using:
+NEXT_PUBLIC_API_BASE_URL
+
+Create typed service functions such as:
+- analyzeScreenshot()
+- getScan()
+- getScanHistory()
+- createOrder()
+- getOrders()
+
+Use FormData for image uploads.
+
+Use explicit request and response TypeScript types. Handle non-2xx responses, invalid JSON, network errors and timeouts sensibly.
+
+Create a separate demo service module for simulated data.
+
+Use an explicit configuration flag or dependency injection to select demo mode. Never silently treat a network error as a successful demo analysis.
+
+Do not add API keys or secret credentials to browser code.
+
+The future backend will return fields similar to:
+- scan_id
+- analysis_status
+- payment_confirmation
+- risk_level
+- duplicate_match
+- checks
+- extracted_fields
+- findings
+
+Adapt names to the existing project consistently and document the API contract in the README.
+
+==================================================
+10. ACCESSIBILITY AND RESPONSIVE BEHAVIOR
+==================================================
+
+Support:
+- Desktop widths around 1440px and 1280px.
+- Tablet widths around 768px.
+- Mobile widths around 390px and 320px.
+
+Requirements:
+- No unintended horizontal overflow.
+- Accessible button labels.
+- Proper heading hierarchy.
+- Keyboard-accessible menus and modals.
+- Visible focus indicators.
+- Form labels and associated error messages.
+- Adequate text contrast.
+- Meaningful alt text for image previews.
+- Respect reduced-motion preferences.
+- Ensure the upload zone works with keyboard navigation, not just drag-and-drop.
+
+==================================================
+11. INTERACTIONS AND MICRO-DETAILS
+==================================================
+
+Implement:
+- Hover and focus states.
+- Button loading states.
+- Disabled states.
+- Toast or inline success feedback.
+- Form validation.
+- Working search/filter behavior for demo datasets.
+- Working sidebar navigation.
+- Working modal open/close behavior.
+- Escape-key handling for modals where appropriate.
+- Click-outside handling where appropriate.
+- Confirmation before discarding an uploaded image if unsaved input would be lost.
+- Empty states with useful actions.
+- Retry buttons on failed requests.
+- A reset action that clears file and form state.
+- Consistent date, amount and file-size formatting.
+
+Avoid excessive motion. Use brief transitions and do not animate every card independently.
+
+==================================================
+12. SECURITY AND PRIVACY IN FRONTEND
+==================================================
+
+This is a financial-evidence tool, so the UI must be careful with sensitive data.
+
+- Do not store uploaded screenshots in localStorage or sessionStorage.
+- Use temporary browser object URLs for previews and revoke them.
+- Do not print extracted transaction details into console logs.
+- Do not put sensitive image data in URL query parameters.
+- Do not hardcode API secrets.
+- Clearly explain when a result is simulated.
+- Include a concise notice about how uploads will be processed when backend functionality is connected.
+- Avoid claiming secure deletion or end-to-end encryption unless actually implemented and verified.
+
+==================================================
+13. QUALITY ASSURANCE
+==================================================
+
+After implementation:
+
+1. Run the application locally.
+2. Run TypeScript checks.
+3. Run ESLint or the project's configured lint command.
+4. Run a production build.
+5. Fix all errors caused by the implementation.
+6. Test every navigation item and CTA.
+7. Test valid image selection, invalid files, oversized files, removal and replacement.
+8. Test demo analysis and result reset.
+9. Test merchant order creation and dashboard filtering.
+10. Test mobile layout and keyboard navigation.
+11. Verify that every visible button has a real action.
+12. Check for broken links, hydration warnings, console errors and missing assets.
+
+Do not merely report that the project works without running the available checks.
+
+If an external dependency or environment limitation prevents a check, state that limitation honestly.
+
+==================================================
+14. DELIVERABLES
+==================================================
+
+Deliver:
+- A complete working frontend.
+- Reusable, typed components.
+- Responsive landing page.
+- Functional screenshot checker in clearly labelled demo mode.
+- Merchant dashboard and subpages.
+- Centralized demo data.
+- API service abstraction ready for FastAPI.
+- Consistent design tokens.
+- .env.example with non-secret placeholders only.
+- README with installation, development and build commands.
+- A short summary of files created and modified.
+- A list of tested features and any remaining limitations.
+
+Final product quality target:
+The result should look polished enough to demonstrate at a serious college hackathon and should provide a strong foundation for the real verification engine in the next development phase.
+
+Start by inspecting the current workspace, then implement the application in manageable steps. Do not stop after generating a plan or wireframe. Build, run, test and fix the actual code.Update the existing project branding from ProofPay to CleanCheck throughout the entire codebase. CleanCheck is the official project name.
+
+Update the logo text, page titles, metadata, landing page, dashboard, upload screen, demo reports, footer, README, UI copy and any project-specific naming consistently.
+
+Keep the tagline: “Verify the payment. Not just the screenshot.”
+
+Do not rebuild the project from scratch. Preserve all existing functionality, design quality, components, routes and working code. Update internal names only where necessary, and ensure there are no unintended ProofPay references left in the user-facing interface. Run the project and verify that the build still passes.

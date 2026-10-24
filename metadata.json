@@ -1,0 +1,6 @@
+{
+  "name": "CleanCheck - Payment Evidence Analysis",
+  "description": "Payment-evidence analysis platform to verify payment screenshots, detect duplicates, and compare receipt details against expected orders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
